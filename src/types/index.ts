@@ -42,6 +42,15 @@ export interface StallLevel {
   emoji: string;
 }
 
+export type NotificationType = "success" | "error" | "info" | "warning";
+
+export interface Notification {
+  id: string;
+  type: NotificationType;
+  title: string;
+  message: string;
+}
+
 export interface GameState {
   money: number;
   stallLevel: number;
@@ -55,4 +64,5 @@ export interface GameState {
   customerMessage: string;
   showCounterOffer: boolean;
   counterOfferPrice: number;
+  notifications: Notification[];
 }

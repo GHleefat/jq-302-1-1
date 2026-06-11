@@ -4,6 +4,7 @@ import { ItemList } from "@/components/ItemList";
 import { CustomerDialog } from "@/components/CustomerDialog";
 import { TradeHistory } from "@/components/TradeHistory";
 import { StallUpgrade } from "@/components/StallUpgrade";
+import { NotificationToast } from "@/components/NotificationToast";
 import { useGameStore } from "@/store/gameStore";
 import { getStallByLevel } from "@/data/stalls";
 import { getCustomerSpawnInterval } from "@/utils/gameLogic";
@@ -34,6 +35,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-100 via-orange-50 to-yellow-100">
+      <NotificationToast />
       <Header />
 
       <main className="container mx-auto px-4 py-6">
